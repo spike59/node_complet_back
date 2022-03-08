@@ -1,0 +1,1 @@
+INSERT INTO `app_user` (`id`, `email`, `password`, `deleted`) VALUES (NULL, 'user@user.fr', 'user', NULL);
