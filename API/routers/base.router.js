@@ -3,12 +3,15 @@ const controllers = require('../controllers');
 const models = require('../models');
 
 class BaseRouter {
-    constructor(){
+    constructor(standard = true){
         this.router = Router();
         this.name = this.constructor.name.replace(`Router`,``);
         this.table = this.name.toLowerCase();
-        this.ct  = new controllers[this.table]();
-        if (models[this.table]){
+        if (standard){
+            this.ct  = new controllers[this.table]();
+        }
+        
+        if ( models[this.table]){
             this.initializeRoutes();
         }
     }

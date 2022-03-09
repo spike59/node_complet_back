@@ -1,1 +1,2 @@
-exports.auth = require('./home.controller');
+exports.root = require('./root.controller');
+exports.auth = require('./auth.controller');

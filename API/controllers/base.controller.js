@@ -2,10 +2,13 @@ const services = require('../services');
 
 class BaseController{
     
-    constructor(){
+    constructor(standard = true){
         this.name = this.constructor.name.replace(`Controller`,``);
-        this.table = this.name.toLowerCase();        
-        this.service = new services[this.table];
+        this.table = this.name.toLowerCase();
+        if (standard){
+            this.service = new services[this.table];
+        }     
+        
     }
 
 }

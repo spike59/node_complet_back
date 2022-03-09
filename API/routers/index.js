@@ -1,1 +1,2 @@
-exports.auth = require('./home.router');
+exports.root = require('./root.router');
+exports.auth = require('./auth.router');
