@@ -1,4 +1,5 @@
 const mysql = require('mysql');
+const {HOST,USER,PASS,NAME} = require('../../config')('db');
 const models = require('../models');
 const requests = require('./requests');
 
@@ -13,10 +14,10 @@ class BaseService{
     static #connect = ()=>{
         if(!BaseService.db){
             BaseService.db= mysql.createPool({
-                host:"localhost",
-                user:"root",
-                password:"",
-                database:"shop_data"
+                host:HOST,
+                user:USER,
+                password:PASS,
+                database:NAME
             })
         }
         return BaseService.db;

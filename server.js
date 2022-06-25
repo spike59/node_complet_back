@@ -1,8 +1,8 @@
 //dependencies
-const shared = require("../node_complet_shared/shared");
+const shared = require("./shared");
 console.log("shared",shared);
 require('./helpers/string.helper');
-const db = require('./DB_tools/db_connect');
+const db = require('./scripts/db/db_connect');
 const express = require('express');
 const cors = require("cors");
 const cookieParser = require('cookie-parser');

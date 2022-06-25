@@ -1,8 +1,8 @@
 const mysql = require('mysql');
 const fs = require('fs');
-const {HOST,USER,PASS,NAME} = require('../config')('db');
+const {HOST,USER,PASS,NAME} = require('../../config')('db');
 
-const createSql = fs.readFileSync("./DB_DATA/create_tables.sql").toString();
+const dataSql = fs.readFileSync("./DB_DATA/populate_tables.sql").toString();
 const db = mysql.createConnection({
     host: HOST,
     user: USER,
@@ -11,7 +11,7 @@ const db = mysql.createConnection({
     multipleStatements:true
 });
 
-db.query(createSql,function(error,results,fields){
+db.query(dataSql,function(error,results,fields){
     if (error){
         throw error;
     }

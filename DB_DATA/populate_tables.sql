@@ -1,1 +1,2 @@
-INSERT INTO `app_user` (`id`, `email`, `password`, `deleted`) VALUES (NULL, 'user@user.fr', 'user', NULL);
+INSERT INTO `app_user` ( `email`, `password`,`role`) VALUES ( 'admin@admin.fr', 'vN.h1c8upt4Y.inpMPT.LuNMl4tF7.MB3AqnK5mahslUmBs8Wj/f.','Admin');
+INSERT INTO `app_user` ( `email`, `password`) VALUES ('user@user.fr', 'YOCwJTqhkRnm5Un1kXgc1uO7wvoTo//b6G5Kqi9gsBBfnHwnm/jAe');
